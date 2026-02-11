@@ -5,6 +5,7 @@ import 'package:google_mlkit_pose_detection/google_mlkit_pose_detection.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:pose_detection_app/const/const.dart';
 import 'package:pose_detection_app/features/image_pose_detection/presentation/image_pose_detection_view.dart';
+import 'package:pose_detection_app/features/real_time_pose_detection/presentation/real_time_pose_detection_view.dart';
 import 'package:pose_detection_app/utils/pose_painter_util.dart';
 
 class PoseDetectorApp extends StatefulWidget {
@@ -34,7 +35,12 @@ class _PoseDetectorAppState extends State<PoseDetectorApp> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text(appTitle)),
-      body: ImagePoseDetectionView(image: _image, resultText: resultText, onPressGetImageBtn: _getImage),
+
+      /// image 기반 자세 인식
+      // body: ImagePoseDetectionView(image: _image, resultText: resultText, onPressGetImageBtn: _getImage),
+
+      /// camera 기반 자세 인식
+      body: RealTimePoseDetectionView(customPaint: customPaint, onImage: _processImage),
     );
   }
 

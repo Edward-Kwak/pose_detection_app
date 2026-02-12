@@ -1,7 +1,7 @@
 # Pose Detection App
 
 <h3>Pose Detection App (Flutter 3.38.9)</h3>
-Pose Detection App by using Google ML Kit.
+Pose Detection App by using Google ML Kit. <b>(State Management: Bloc)</b>
 <br></br>
 
 # Features
